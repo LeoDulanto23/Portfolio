@@ -1,0 +1,63 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+/* Keyframes for fade-in effect */
+@keyframes fadeInSlider {
+    0% {
+      opacity: 0;
+      transform: translateY(10px); /* Optional slight upward motion for smoothness */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+/* ImageSlider.scss */
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInSlider 1.5s ease-in-out forwards; /* Fade-in animation for the entire slider */
+  }
+  
+  .slider-image {
+    width: 50%;
+    max-width: 600px;
+    position: relative;
+    height: auto;
+    right:75px;
+    border-radius: 10px;
+    margin-bottom: 120px;
+    opacity: 0;
+    animation: fadeInSlider 1.5s ease-in-out forwards 0.5s; /* Staggered fade-in for the image */
+  }
+  
+  .slider-arrow {
+    position: absolute !important;
+    top: 30%; //height
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff5f5;
+    padding: 10px;
+    user-select: none;
+    opacity: 0;
+    animation: fadeInSlider 1.5s ease-in-out forwards 1s; /* Staggered fade-in for the arrows */
+  }
+  
+  .slider-arrow.left {
+    position: absolute; /* Ensure it's positioned relative to the slider */
+    left: 10px;
+  }
+  
+  .slider-arrow.right {
+    right: 160px;
+  }
+  
+  .slider-arrow:hover {
+    color: #000;
+  }
+  

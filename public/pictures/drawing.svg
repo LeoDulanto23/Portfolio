@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="drawing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72426347"
+     inkscape:cx="396.95499"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#shading5"
+       preserveAspectRatio="xMidYMid"
+       id="pattern39"
+       patternTransform="scale(0.2)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="349.7577"
+       height="27.6099"
+       patternTransform="scale(0.2)"
+       preserveAspectRatio="xMidYMid"
+       id="shading5"
+       style="fill:#000000"
+       inkscape:label="Lines shading big"
+       inkscape:collect="always"
+       inkscape:isstock="true">
+      <path
+         id="path37"
+         style="stroke-width:0.487199;stroke-linecap:square;paint-order:markers fill stroke;stop-color:#000000"
+         d="m 349.5257,0 h 0.232 v 27.6099 h -0.232 z m -18.396,0 h 1.0542 v 27.6099 h -1.0542 z m -18.3961,0 h 1.8765 v 27.6099 h -1.8765 z m -18.3961,0 h 2.6988 v 27.6099 h -2.6988 z m -18.3961,0 h 3.5211 v 27.6099 h -3.5211 z m -18.3961,0 h 4.3434 v 27.6099 h -4.3434 z m -18.3961,0 h 5.1658 v 27.6099 h -5.1658 z m -18.3961,0 h 5.9881 v 27.6099 h -5.9881 z M 202.357,0 h 6.8104 v 27.6099 h -6.8104 z m -18.3961,0 h 7.6327 v 27.6099 h -7.6327 z m -18.3961,0 h 8.455 v 27.6099 h -8.455 z m -18.3961,0 h 9.2773 v 27.6099 h -9.2773 z m -18.396,0 h 10.0995 v 27.6099 h -10.0995 z m -18.3961,0 h 10.9218 V 27.6099 H 110.3766 Z M 91.9805,0 h 11.7441 V 27.6099 H 91.9805 Z M 73.5844,0 H 86.1509 V 27.6099 H 73.5844 Z M 55.1883,0 H 68.5771 V 27.6099 H 55.1883 Z M 36.7922,0 H 51.0033 V 27.6099 H 36.7922 Z M 18.3961,0 H 33.4295 V 27.6099 H 18.3961 Z M 0,0 H 15.8557 V 27.6099 H 0 Z"
+         sodipodi:nodetypes="cccccccccc" />
+    </pattern>
+    <linearGradient
+       id="swatch22"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop22" />
+    </linearGradient>
+    <linearGradient
+       id="swatch16"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop16" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path1"
+       cx="55.710331"
+       cy="73.062729"
+       rx="19.544281"
+       ry="20.092251" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path2"
+       cx="56.623615"
+       cy="77.446487"
+       rx="8.4022141"
+       ry="8.0369005" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path3"
+       cx="62.833946"
+       cy="79.638382"
+       rx="12.05535"
+       ry="9.8634682" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path4"
+       cx="66.487083"
+       cy="77.081177"
+       rx="1.4612546"
+       ry="0.36531365" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path5"
+       cx="59.911438"
+       cy="126.76384"
+       rx="30.321033"
+       ry="37.261993" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path6"
+       cx="101.00922"
+       cy="97.53875"
+       rx="36.348709"
+       ry="40.915131" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path7"
+       cx="71.053505"
+       cy="67.583023"
+       rx="14.064575"
+       ry="21.918819" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path8"
+       cx="94.433578"
+       cy="105.94096"
+       rx="29.042437"
+       ry="26.302584" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path9"
+       cx="92.059036"
+       cy="95.712181"
+       rx="15.343174"
+       ry="23.745386" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path10"
+       cx="81.464951"
+       cy="91.145752"
+       rx="31.416973"
+       ry="32.330257" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path11"
+       cx="85.848709"
+       cy="92.972321"
+       rx="19.361622"
+       ry="19.544281" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path12"
+       cx="88.223251"
+       cy="100.46125"
+       rx="34.522141"
+       ry="41.64576" />
+    <ellipse
+       style="fill:none;stroke-width:0.264583"
+       id="path13"
+       cx="68.678963"
+       cy="81.464951"
+       rx="35.800739"
+       ry="24.84133" />
+    <ellipse
+       style="fill:url(#pattern39);fill-opacity:1;stroke-width:0.257168"
+       id="path14"
+       cx="107.21955"
+       cy="134.80074"
+       rx="83.839478"
+       ry="81.464935" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.211453"
+       id="path15"
+       cx="106.1236"
+       cy="135.71404"
+       rx="73.245377"
+       ry="69.226936" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.564px;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua';fill:#000000;fill-opacity:1;stroke-width:1.37361"
+       x="52.432571"
+       y="152.7717"
+       id="text16"
+       transform="scale(0.88304151,1.1324496)"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="fill:#000000;stroke-width:1.37361"
+         x="52.432571"
+         y="152.7717">DL</tspan></text>
+  </g>
+</svg>

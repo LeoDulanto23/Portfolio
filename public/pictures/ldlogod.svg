@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: Lato-BoldItalic, Lato;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #29abe2;
+      }
+
+      .cls-3 {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_1">
+      <g>
+        <rect class="cls-3" x="1" y="1" width="14" height="14" rx="3.6" ry="3.6"/>
+        <path class="cls-2" d="M11.4,2c1.43,0,2.6,1.16,2.6,2.6v6.81c0,1.43-1.16,2.6-2.6,2.6h-6.81c-1.43,0-2.6-1.16-2.6-2.6v-6.81c0-1.43,1.16-2.6,2.6-2.6h6.81M11.4,0h-6.81C2.06,0,0,2.06,0,4.6v6.81c0,2.54,2.06,4.6,4.6,4.6h6.81c2.54,0,4.6-2.06,4.6-4.6v-6.81c0-2.54-2.06-4.6-4.6-4.6h0Z"/>
+      </g>
+      <text class="cls-1" transform="translate(1.13 12.68)"><tspan x="0" y="0">LD </tspan></text>
+    </g>
+  </g>
+</svg>

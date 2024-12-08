@@ -1,0 +1,29 @@
+/*Could be used to provide text style and moving said text*/
+@font-face
+{
+    font-family: 'Wilhelmina';
+    src: url('./font/Wilhelmina.png') format('Wilhemina');
+}
+.container 
+{
+    font-family: 'Wilhelmina';
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    height: 100vh;
+    width: 100vw; /* Make sure this covers the full viewport width*/
+    border: 2px solid red; /* Temporarily add a border to see the container*/
+}
+
+.moveHeader 
+{
+    font-size: 80px;
+    /*text-align: center;
+    width: 100%; /* Ensures it takes the full width of its container*/
+    /*border: 2px solid blue; /* Temporarily add a border to see the element*/
+}
+.listGroupStyling
+{
+    font-family: 'Wilhelmina';
+    
+}

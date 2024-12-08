@@ -1,0 +1,179 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+/* Custom font */
+@font-face {
+  font-family: 'PTFont';
+  src: url('../assets/PatriciaGothic-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PTRoot';
+  src: url('../assets/pt-root-ui_bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AvenirBlack';
+  src: url('../assets/AvenirLTStd-LightOblique.otf') format('opentype');
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Header Container */
+.header {
+  position: sticky !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: none !important;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 2s forwards;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-family: 'AvenirBlack';
+  font-size: 28px;
+}
+
+/* Apply Pulse Animation on Hover */
+.logo:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  list-style-type: none;       /* Remove bullet points */
+  //text-decoration: none !important;   /* Remove underline */
+  display: flex;               /* Align tabs horizontally */
+  justify-content: flex-end;   /* Align tabs to the right */
+  border-bottom: none !important;  /* Ensure no border at the bottom */
+  gap: 20px;                   /* Space between tabs */
+  position: relative;
+  top:30px;
+  padding: 0;
+  margin-top: -40px;
+  font-family: 'PTFont';       /* Use your custom font */
+}
+
+/* Navigation Links */
+.nav-tabs li {
+  display: inline-block;
+  padding: 10px 20px;        /* Consistent padding */
+  transition: transform 0.2s ease-in-out; /* Smooth hover transition */
+  &:hover {
+    transform: scale(1.55);  /* Optional: slight zoom on hover */
+    animation: pulse 1s infinite;
+  }
+}
+
+.nav-tabs li a,
+.nav-tabs li button {
+  text-decoration: none !important;   /* Remove underline */
+  color: rgb(0, 0, 0);  /* Text color */
+  font-weight: 800;
+  font-family: 'PTFont';   
+  font-size: 18px;
+  background: none;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+// Define resume-tab after the generic styles
+.nav-tabs li a.resume-tab {
+  text-decoration: none !important;
+  color: rgb(255, 253, 253);
+  font-weight: 800;
+  font-family: 'PTFont';
+  font-size: 15px;
+  background: black;
+  border: none;
+  border-radius: 58px;
+  padding: 10px 10px;  /* Increase these values to create a bigger background area */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.download {
+  position: relative;
+  width: 18px;
+  height: 20px;
+  margin-right: 8px; // adjust as needed
+}
+/* Apply Pulse Animation on Hover */
+//.resume-tab:hover,
+.nav-tabs li a:hover,
+.nav-tabs li button:hover {
+  animation: pulse 1s infinite;
+  color: rgb(0, 0, 0);       /* Hover text color */
+  text-decoration: none !important;     /* Ensure underline is removed on hover */
+}
+.nav-tabs li a.resume-tab:hover{
+  animation: pulse 1s infinite;
+  color: rgb(148, 148, 148);       /* Hover text color */
+  text-decoration: none !important;     /* Ensure underline is removed on hover */
+}
+.nav-tabs li a:focus,
+.nav-tabs li button:focus {
+  outline: none !important;
+}
+
+/* Main Content */
+.main-content {
+  padding-top: 90px; /* Adjust based on the header height */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-tabs {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .nav-tabs li a,
+  .nav-tabs li button {
+    font-size: 16px;
+  }
+}

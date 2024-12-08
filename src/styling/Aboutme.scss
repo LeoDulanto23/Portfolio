@@ -1,0 +1,246 @@
+// src/utilites/Aboutme.scss
+@import "../../node_modules/bootstrap/scss/bootstrap";
+//@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+@font-face {
+    font-family: 'PTFont';
+    src: url('../assets/PatriciaGothic-Light.ttf') format('truetype');
+}
+/* Ensure body and html span full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Page Container to manage layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container spans the full viewport height */
+}
+.aboutme-root {
+  //--bs-body-bg: rgb(26, 201, 201);
+  padding: 0; /* Reduce default padding */
+  flex: 1; /* Ensures it takes up all available space, pushing the footer down */
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  display: inline;
+  //align-items: baseline;
+  font-family: 'PTFont', sans-serif;
+  font-size: 12em;
+  font-weight: bold;
+  color: rgb(50, 48, 48);
+  position: relative;
+  right: 200px;
+  bottom: 400px;
+  text-align: center;
+}
+/* Fade-in animation for each letter */
+.fade-in-letter {
+  opacity: 0; /* Start hidden */
+  animation: fadeInTitle 1s ease forwards;
+  display: inline-block; /* Ensure each letter stays in its own space */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeInTitle {
+  from {
+    position: relative;
+    bottom: 140px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+/* Add a staggered delay for each letter */
+.fade-in-letter:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fade-in-letter:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.fade-in-letter:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.fade-in-letter:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.fade-in-letter:nth-child(5) {
+  animation-delay: 1.0s;
+}
+.paragraph {
+  font-size: 4em;
+  font-weight: lighter;
+  color: rgb(69, 67, 67);
+  position: relative;
+  object-fit: cover;
+  right: 250px;
+  bottom: 400px;
+
+  /* Start off-screen to the left */
+  transform: translateX(-100vw); /* Move element entirely off-screen to the left */
+
+  /* Slide-in animation */
+  animation: slide-in-left 2s ease-out forwards; /* Adjust timing as needed */
+}
+
+/* Keyframes for sliding in from left to right */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100vw); /* Start completely off-screen to the left */
+  }
+  to {
+    transform: translateX(0);      /* End at its original position */
+  }
+}
+
+
+.subparagraph {
+  font-family: 'Tahoma' sans-serif;
+  font-size: 2em;
+  font-weight: lighter;
+  color: rgb(115, 112, 112);
+  position: relative;
+  object-fit: cover;
+  bottom: 390px;
+  right: 250px;
+  text-align: center;
+
+  /* Start off-screen to the left */
+  transform: translateY(100vw); /* Move element entirely off-screen to the left */
+
+  /* Slide-in animation */
+  animation: slide-in-up 2s ease-out forwards; /* Adjust timing as needed */
+}
+/* Keyframes for sliding in from left to right */
+@keyframes slide-in-up {
+  from {
+    transform: translateY(100vw); /* Start completely off-screen to the left */
+  }
+  to {
+    transform: translateY(0);      /* End at its original position */
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Common styles for all icons */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  opacity: 0; /* Start invisible */
+  animation: slideUp 2s ease-out forwards; /* Apply the animation */
+  transition: transform 0.2s ease-in-out; /* Transition for grow effect */
+}
+/* Grow effect on hover */
+.icon:hover {
+  transform: scale(1.5) !important; /* Enlarge icon on hover */
+}
+/* Slide-up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px); /* Start slightly below */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1;
+  }
+}
+
+/* Specific icons with delays */
+.linkedin {
+  right: 230px;
+  bottom: 380px;
+  animation-delay: 0.4s; /* First icon */
+}
+
+.email {
+  right: 200px;
+  bottom: 380px;
+  animation-delay: 0.8s; /* Second icon */
+}
+
+.github {
+  right: 170px;
+  bottom: 380px;
+  animation-delay: 1.0s; /* Third icon */
+}
+
+.parent-containerTwo {
+  display: flex;
+  flex-direction: row; /* Ensure children are aligned in a row */
+  //justify-content: space-between; /* Optional: Adjust spacing */
+  align-items: center; /* Optional: Adjust vertical alignment */
+  //margin-left: 50px;
+}
+.profile-photo {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+  left: 470px;
+  object-fit: cover;
+  top: 120px;
+  
+  /* Animation properties */
+  animation: slide-in 2s ease-out; /* Adjust the duration (2s) as needed */
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100vw); /* Starts off-screen to the right */
+  }
+  to {
+    transform: translateX(0); /* Ends in its original position */
+  }
+}
+.Copyright {
+  position: relative !important; /* Fix the position relative to the viewport */
+  bottom: 0px; /* Align it to the bottom */
+  left: 0; /* Align it to the left edge */
+  width: 100%; /* Span the full width of the viewport */
+  text-align: center; /* Center the text */
+  font-family: 'Tahoma', sans-serif; /* Use the desired font */
+  font-size: small; /* Adjust font size */
+  font-weight: lighter; /* Adjust font weight */
+  //background-color: rgba(255, 255, 255, 0.9); /* Add slight background for visibility */
+  z-index: 9999; /* Ensure it appears above other content */
+  color: black; /* Adjust text color */
+  padding: 0px 0; /* Add padding for better spacing */
+  //box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better contrast */
+}
+/* Aboutme.scss */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards; /* Adjust duration as needed */
+}
+
+.fade-in.show {
+  opacity: 1;
+}

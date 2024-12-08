@@ -1,0 +1,232 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family:'AvenirMedium';
+    src: url('../assets/AvenirLTStd-Light.otf') format('opentype');
+}
+@font-face {
+    font-family:'AvenirBook';
+    src: url('../assets/AvenirLTStd-Book.otf') format('opentype');
+}
+
+/* Keyframes for fade-in effect - only fades opacity */
+@keyframes fadeInSkills {
+    0% {
+        //transform: translateY(130px);
+        position: relative;
+        top: 190px;
+        opacity: 0; 
+    }
+    100% { 
+        //transform: translateY(0px);
+        position: relative;
+        top: 0px;
+        opacity: 1; 
+    }
+}
+
+/* Shimmer Effect Keyframes */
+@keyframes shimmer {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+}
+@keyframes shimmer-slide {
+    0% {
+      left: -150%; /* Start outside on the left */
+    }
+    100% {
+      left: 150%; /* Move outside to the right */
+    }
+}
+/* Skills Section */
+.skills-root {
+  padding: 40px;
+  text-align: center;
+  margin-top: 120px; /* Optional: Add top margin if needed */
+  //bottom:100px;
+  position: static; /* Ensure it doesn't affect children with fixed positioning */
+  overflow: visible;
+}
+
+.skills-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: static; /* Same here */
+  overflow: visible;
+  cursor: pointer;
+}
+
+.skill-item {
+  // Initial styles remain the same
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  //animation: shimmer 4s linear infinite; /* Infinite shimmer animation */
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Slightly moved down */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    //background-color: aquamarine;
+  }
+
+  /* Shimmer effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start far left */
+    width: 200%; /* Cover the block */
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(192, 192, 192, 0.1) 0%, /* Subtle silver */
+      rgba(255, 255, 255, 0.8) 50%, /* White shine */
+      rgba(192, 192, 192, 0.1) 100% /* Subtle silver */
+    );
+    transform: skewX(-20deg); /* Create diagonal shimmer */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+    transition: none; /* No transition by default */
+    animation: none; /* Animation only triggers on hover */
+  }
+
+  /* Trigger shimmer animation on hover */
+  &:hover::before {
+    animation: shimmer-slide 1s ease-in-out forwards; /* Play shimmer animation */
+  }
+  
+
+  .skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-family: 'AvenirBook';
+  }
+
+  .skill-description {
+    font-size: 0.9rem;
+    color: #101010;
+    font-weight: 200;
+    font-family: 'AvenirMedium';
+  }
+}
+
+/* When .fade-in is applied, make the skill-items visible */
+.skill-item.fade-in {
+    animation: fadeInSkills 1.2s ease-in-out forwards;
+    opacity: 0; /* Start hidden */
+    display: inline-block; /* Ensure each letter stays in its own space */
+    //opacity: 1; /* Final state */
+    //transform: translateY(0); /* Final position */
+}
+
+/* Row-based fade-in delays assuming 6 items per row */
+/* Adjust the number of nth-child groups based on how many skill-items you have. */
+
+/* First row (items 1–6) - base delay (no extra delay) */
+.skill-item.fade-in:nth-child(1){
+    animation-delay: 0.3s;
+    background-color: #b14949;
+}
+.skill-item.fade-in:nth-child(2){
+    animation-delay: 0.6s;
+    background-color: #c06656;
+}
+.skill-item.fade-in:nth-child(3){
+    animation-delay: 0.9s;
+    background-color: #be6f75;
+}
+.skill-item.fade-in:nth-child(4){
+    animation-delay: 1.2s;
+    background-color: #eda18f;
+}
+.skill-item.fade-in:nth-child(5){
+    animation-delay: 1.5s;
+    background-color: #F3C5C5;
+}
+.skill-item.fade-in:nth-child(6){
+    animation-delay: 1.7s;
+    background-color: #F6D1C3;
+}
+
+/* Second row (items 7–12) */
+.skill-item.fade-in:nth-child(7){
+    animation-delay: 3.7s;
+    background-color: #FFF4E0;
+}
+.skill-item.fade-in:nth-child(8){
+    animation-delay: 3.3s;
+    background-color: #FFECD1;
+}
+.skill-item.fade-in:nth-child(9){
+    animation-delay: 3.0s;
+    background-color: #FDEBC8;
+}
+.skill-item.fade-in:nth-child(10){
+    animation-delay: 2.7s;
+    background-color: #F8E4B8;
+}
+.skill-item.fade-in:nth-child(11){
+    animation-delay: 2.3s;
+    background-color: #F5DEB3;
+}
+.skill-item.fade-in:nth-child(12){
+    animation-delay: 2.0s;
+    background-color: #eac89f;
+}
+
+/* Third row (items 13–18) */
+.skill-item.fade-in:nth-child(13){
+    animation-delay: 3.4s;
+    background-color: #795d42;
+}
+.skill-item.fade-in:nth-child(14){
+    animation-delay: 3.6s;
+    background-color: #966e49;
+}
+.skill-item.fade-in:nth-child(15){
+    animation-delay: 3.8s;
+    background-color: #b48b6a;
+}
+.skill-item.fade-in:nth-child(16){
+    animation-delay: 4.0s;
+    background-color: #c39778;
+}
+.skill-item.fade-in:nth-child(17){
+    animation-delay: 4.3s;
+    background-color: #d6aa7e;
+}
+.skill-item.fade-in:nth-child(18){
+    animation-delay: 4.6s;
+    background-color: #d6b67f;
+}
+
+/* Add more row groups as needed */
+
+/* Smooth Scrolling*/
+html {
+  scroll-behavior: smooth;
+}

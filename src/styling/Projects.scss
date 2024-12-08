@@ -1,0 +1,245 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Custom font */
+@font-face {
+  font-family: 'PTFont';
+  src: url('../assets/PatriciaGothic-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family:'ModernDeco' ;
+  src: url('../assets/Modern Deco.ttf') format('truetype');
+}
+@font-face {
+  font-family:'EleganTech' ;
+  src: url('../assets/EleganTech.ttf') format('truetype');
+}
+@font-face {
+  font-family:'techniqo' ;
+  src: url('../assets/techniqo.ttf') format('opentype');
+}
+@font-face {
+  font-family:'terracota' ;
+  src: url('../assets/terracota.otf') format('opentype');
+}
+@font-face {
+  font-family:'AvenirMedium';
+  src: url('../assets/AvenirLTStd-Light.otf') format('opentype');
+}
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(170px); /* Start below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(5); /* End at original position */
+  }
+}
+/* Shimmer Effect Keyframes */
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Projects container */
+.projects-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Ensure stacking context is properly established */
+  z-index: 0; /* Default stacking order */
+  //height: 200px;
+}
+
+.project-note {
+  width: 50%;
+  //height: 160%;
+  //height: 240px; /* Increased height */
+  min-height: 140px; /* Increase the minimum height */
+  padding: 10px;
+  margin: 12px 0;
+  opacity: 1; /* Initially hidden */
+  transform: translateY(100px); /* Start slightly below */
+  border-radius: 20px;
+  position: relative; /* Allow overlapping */
+  bottom: 170px;
+  z-index: 1; /* Base stacking order */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  //background-color: white;
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transitions */
+  overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.project-note::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  //animation: shimmer 4s ease-out forwards;
+  z-index: 2;
+  pointer-events: none; /* Ensure it doesn't block interactions with the project-note */
+  border-radius: 20px; /* Match the shape of the project note */
+}
+/* Trigger Shimmer Effect on Hover (Once) */
+.project-note:hover::after {
+  animation: shimmer 1.5s ease-out forwards; /* Shimmer animation plays once on hover */
+  opacity: 1; /* Ensure the shimmer is visible during the animation */
+}
+.project-note.slide-in {
+  animation: fadeSlideUp 1s ease-out forwards; /* Trigger animation */
+  //opacity: 1; /* Ensure visibility after animation */
+  //transform: translateY(0); /* Maintain position after animation */
+}
+
+.project-note:nth-child(1) {
+  animation-delay: 0.2s;
+  z-index: 4; /* Topmost */
+  //height: 240px;
+  //position: relative;
+  //bottom: 50px; /* Starts normally */
+  background-color:#922b21;
+}
+
+.project-note:nth-child(2) {
+  animation-delay: 0.4s;
+  z-index: 3; /* Below first */
+  margin-top: -30px; /* Overlaps the first */
+  background-color: #f0b27a;
+}
+.project-note:nth-child(3) {
+  animation-delay: 0.6s;
+  z-index: 2; /* Bottommost */
+  margin-top: -30px; /* Overlaps the second */
+  background-color: #36454F;
+}
+.project-note:nth-child(4) {
+  animation-delay: 0.8s;
+  z-index: 1; /* Bottommost */
+  margin-top: -30px; /* Overlaps the second */
+  background-color: #AF8C72;
+}
+
+.project-note-inner {
+  transition: transform 0.2s ease;
+  transform-origin: top left;
+  font-family: 'AvenirMedium', sans-serif; /* Set font to Roboto or another desired font */
+}
+
+.project-note:hover .project-note-inner {
+  transform: scale(1.2);
+}
+/* Hover effect */
+.project-note:hover {
+  //transform: scale(1.1);
+  z-index: 5; /* Bring to front when hovered */
+  //transition: transform 0.2s ease-in-out;
+}
+
+.project-title {
+  font-size: 2.8rem;
+  font-weight: 300;            /* Bold */
+  margin-bottom: 40px;         /* Add space between title and description */
+  color: #f0f0fa;              /* White or another color */
+  position: relative;
+  left: 40px;
+  top: 40px;
+}
+
+.project-description {
+  position: relative;
+  top: 40px;         /* Space between the description and other content */
+  left: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  color:#fffff9;
+  font-weight: 200;
+  font-family: 'PTFont';
+  font-size: 17px;
+  opacity: 0;
+}
+.project-note:hover .project-description,
+.project-note.active .project-description {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset position */
+  animation: fadeIn 1.5s ease-in forwards; /* Optional animation */
+}
+/*.project-gif {
+  width: 80%;
+  height: 130px;
+  border-radius: 8px;          /* Round the corners of the image 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth 
+  margin-bottom: 40px;
+}*/
+/* Project content */
+.project-content {
+  display: none; /* Hide by default */
+  font-size: 1.2rem;
+  color: #dcdcdc;              /* Light color to stand out from the dark overlay */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.project-content.visible {
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction */
+  display: block; /* Show when active */
+  max-height: 1000px; /* Adjust as needed */
+  margin-top: 10px; /* Add space above content */
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* Close button */
+.close-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  position: relative;
+  left: 350px;
+  top: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'terracota', sans-serif; /* Set font to Roboto or another desired font */
+  font-weight: 700;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #7d7373;
+}
+/* Optional: Prevent close button from being scaled */
+.project-note:hover .close-button {
+  transform: scale(0.909); /* Adjust if necessary to counteract scaling */
+  transform-origin: top right; /* Adjust origin if needed */
+}
+#projects {
+  scroll-margin-top: 100px; /* Adjust the margin to control scroll position */
+}
